@@ -2,8 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { TiDeleteOutline } from "react-icons/ti";
 import {
-  quantityIncrement,
-  quantityDecrement,
+  incrementQuantity,
+  decrementQuantity,
   removeFromCart,
 } from "../features/cart/cartSlice";
 
@@ -12,11 +12,11 @@ export default function Checkout() {
   const dispatch = useDispatch();
 
   function increaseQuantity(id) {
-    dispatch(quantityIncrement(id));
+    dispatch(incrementQuantity(id));
   }
 
   function decreaseQuantity(id) {
-    dispatch(quantityDecrement(id));
+    dispatch(decrementQuantity(id));
   }
 
   function productRemoval(id) {
