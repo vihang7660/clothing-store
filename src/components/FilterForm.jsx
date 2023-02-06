@@ -52,7 +52,7 @@ export default function FilterForm() {
       >
         Reset
       </button>
-      <label htmlFor="searchText" className="text-gray-700">
+      <label htmlFor="searchText" className="text-gray-700 ml-60">
         Search:
       </label>
       <input
