@@ -28,13 +28,13 @@ const cartSlice = createSlice({
       state.filters = { ...state.filters, ...action.payload };
       state.cartList = state.products
         .filter((product) =>
-          product.productName
+          product.type
             .toLowerCase()
             .includes(state.filters.searchText.toLowerCase())
         )
         .filter((product) => product.size.includes(state.filters.size))
         .filter((product) =>
-          product.productName.includes(state.filters.apparelType)
+          product.type.includes(state.filters.apparelType)
         );
     },
     resetFilters(state, action) {
