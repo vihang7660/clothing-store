@@ -26,78 +26,20 @@ export default function ProductListing() {
     dispatch(updateCart({ id, value: e.target.checked }));
   }
 
-  /* return (
-    <>
-      <FilterForm />
-      <table>
-        <thead>
-          <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Color</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Buy</th>
-          </tr>
-        </thead>
-        <tbody>
-          {cartList.map((product) => {
-            return (
-              <tr key={product.id}>
-                <td>
-                  <div className="w-20 h-24">
-                    <img src={product.image} alt="Product Image" className="flex object-cover h-full w-full" />
-                  </div>
-                </td>
-                <td>{product.type}</td>
-                <td>{product.color}</td>
-                <td>{product.price}</td>
-                <td>
-                  <form>
-                    <input
-                      type="text"
-                      value={product.quantity}
-                      onChange={(e) => handleQuantityChange(e, product.id)}
-                    />
-                  </form>
-                </td>
-                <td>
-                  <form className="flex">
-                    <label htmlFor={product.id}>
-                      <BsCartPlusFill />
-                    </label>
-                    <input
-                      type="checkbox"
-                      name="addedToCart"
-                      id={product.id}
-                      checked={product.isInCart}
-                      onChange={(e) => handleCartUpdate(e, product.id)}
-                    />
-                  </form>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      <Link to="/checkout">Proceed to Checkout</Link>
-    </>
-  ); */
-
   return (
     <>
       <div className="flex items-center gap-4 justify-between">
-      <div className="py-4">
-        <FilterForm />
-      </div>
-      <div className="py-4 w-auto">
-        <Link
-          to="/checkout"
-          className="bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded "
-        >
-          Go to Cart
-        </Link>
-      </div>
+        <div className="py-4">
+          <FilterForm />
+        </div>
+        <div className="py-4 w-auto">
+          <Link
+            to="/checkout"
+            className="bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded "
+          >
+            Go to Cart
+          </Link>
+        </div>
       </div>
       <table className="w-full text-left table-collapse">
         <thead>
